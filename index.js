@@ -22,7 +22,7 @@ async function readTrack(trackConfig,regionList) {
                 start: r.start,
                   end: r.end,
         })) {
-              console.log(`${trackConfig.label}\t${feature.get('seq_id')}\t${feature.get('start')}\t${feature.get('end')}\t${feature.get('name')}`)
+              console.log(`${trackConfig.label}\t${feature.get('seq_id')}\t${feature.get('start')}\t${feature.get('end')}\t${feature.get('id')||feature.get('load_id')||'.'}\t${feature.get('name')||'.'}`)
           }
     })
 }
